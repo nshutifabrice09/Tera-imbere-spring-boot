@@ -3,6 +3,11 @@ package com.tsl.Tera_imbere.utilities;
 import java.time.Year;
 
 public class AccountUtilities {
+    public static final String ACCOUNT_EXISTS_CODE = "001";
+    public static final String ACCOUNT_EXISTS_MESSAGE = "This user already exists!";
+    public static final String ACCOUNT_CREATION_SUCCESS = "002";
+    public static final String ACCOUNT_CREATION_MESSAGE = "Account has been created successfully.";
+
 
     public static String generateAccountNumber(){
         Year currentYear = Year.now();

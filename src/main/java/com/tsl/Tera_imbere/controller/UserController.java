@@ -2,6 +2,7 @@ package com.tsl.Tera_imbere.controller;
 
 import com.tsl.Tera_imbere.model.User;
 import com.tsl.Tera_imbere.repository.UserRepository;
+import com.tsl.Tera_imbere.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @Autowired
+    UserService userService;
     public UserRepository userRepository;
 
     @PostMapping("/user")
