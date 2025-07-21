@@ -15,6 +15,7 @@ import lombok.NoArgsConstructor;
 public class EmailDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String recipient;
     private String messageBody;
     private String subject;

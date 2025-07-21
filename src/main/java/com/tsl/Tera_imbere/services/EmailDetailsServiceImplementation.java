@@ -27,7 +27,7 @@ public class EmailDetailsServiceImplementation implements EmailDetailsService{
 
     @Override
     public EmailDetails saveEmailDetails(EmailDetails emailDetails) {
-        return null;
+        return emailDetailsRepository.save(emailDetails);
     }
 
     @Override
@@ -37,6 +37,6 @@ public class EmailDetailsServiceImplementation implements EmailDetailsService{
 
     @Override
     public void removeEmailDetails(Long id) {
-
+        emailDetailsRepository.deleteById(id);
     }
 }
