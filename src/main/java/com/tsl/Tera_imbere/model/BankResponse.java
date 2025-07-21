@@ -1,4 +1,4 @@
-package com.tsl.Tera_imbere.dto;
+package com.tsl.Tera_imbere.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

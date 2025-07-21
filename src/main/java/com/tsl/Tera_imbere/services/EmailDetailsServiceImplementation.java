@@ -6,8 +6,8 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
 @Service
-public class EmailServiceImplementation implements EmailService{
-    public EmailServiceImplementation(JavaMailSender javaMailSender) {
+public class EmailDetailsServiceImplementation implements EmailDetailsService {
+    public EmailDetailsServiceImplementation(JavaMailSender javaMailSender) {
         this.javaMailSender = javaMailSender;
     }
 

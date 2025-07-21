@@ -2,7 +2,8 @@ package com.tsl.Tera_imbere.services;
 
 import com.tsl.Tera_imbere.model.EmailDetails;
 
-public interface EmailService {
+import java.util.List;
 
-    void sendEmailAlert(EmailDetails emailDetails);
+public interface EmailDetailsService {
+
 }
