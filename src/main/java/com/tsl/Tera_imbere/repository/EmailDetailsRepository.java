@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EmailDetailsRepository extends JpaRepository<EmailDetails, Long> {
+    EmailDetails findEmailDetailsById(Long id);
 }

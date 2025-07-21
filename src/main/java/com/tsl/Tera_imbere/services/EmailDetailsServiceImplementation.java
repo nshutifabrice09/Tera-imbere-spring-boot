@@ -1,20 +1,28 @@
 package com.tsl.Tera_imbere.services;
 import com.tsl.Tera_imbere.model.EmailDetails;
+import com.tsl.Tera_imbere.repository.EmailDetailsRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
 public class EmailDetailsServiceImplementation implements EmailDetailsService{
 
+    private final EmailDetailsRepository emailDetailsRepository;
+
+    @Autowired
+    public EmailDetailsServiceImplementation(EmailDetailsRepository emailDetailsRepository) {
+        this.emailDetailsRepository = emailDetailsRepository;
+    }
 
     @Override
     public List<EmailDetails> emailDetailsList() {
-        return null;
+        return emailDetailsRepository.findAll();
     }
 
     @Override
     public EmailDetails getEmailDetailsById(Long id) {
-        return null;
+        return emailDetailsRepository.findEmailDetailsById(id);
     }
 
     @Override
