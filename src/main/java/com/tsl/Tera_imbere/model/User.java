@@ -1,8 +1,10 @@
 package com.tsl.Tera_imbere.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -11,6 +13,8 @@ import java.util.UUID;
 
 @Builder
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "users")
 public class User {
     @Id
@@ -32,27 +36,6 @@ public class User {
     private LocalDateTime createdAt;
     @UpdateTimestamp
     private LocalDateTime updatedAt;
-
-    public User() {
-    }
-
-    public User(Long id, String firstName, String lastName, String otherName, String gender, String city, String address, String accountNumber, String accountBalance, String email, String phoneNumber, String password, String status, LocalDateTime createdAt, LocalDateTime updatedAt) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.otherName = otherName;
-        this.gender = gender;
-        this.city = city;
-        this.address = address;
-        this.accountNumber = accountNumber;
-        this.accountBalance = accountBalance;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-        this.password = password;
-        this.status = status;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
-    }
 
     public Long getId() {
         return id;
