@@ -6,4 +6,10 @@ import java.util.List;
 
 public interface EmailDetailsService {
 
+    List<EmailDetails> emailDetailsList();
+    EmailDetails getEmailDetailsById(Long id);
+    EmailDetails saveEmailDetails(EmailDetails emailDetails);
+    EmailDetails updateEmailDetails(Long id, EmailDetails emailDetails);
+    void removeEmailDetails(Long id);
+
 }
