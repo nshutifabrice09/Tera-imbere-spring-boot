@@ -6,6 +6,7 @@ import java.util.List;
 @Service
 public class EmailDetailsServiceImplementation implements EmailDetailsService{
 
+
     @Override
     public List<EmailDetails> emailDetailsList() {
         return null;
