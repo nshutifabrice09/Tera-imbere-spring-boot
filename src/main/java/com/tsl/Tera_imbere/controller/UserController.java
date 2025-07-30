@@ -25,9 +25,9 @@ public class UserController {
         return userRepository.save(user);
     }
 
-    @GetMapping("/users")
-    public List<User> userList(){
-        return userService.get
-    }
+//    @GetMapping("/users")
+//    public List<User> userList(){
+//        return userService.get
+//    }
 
 }
