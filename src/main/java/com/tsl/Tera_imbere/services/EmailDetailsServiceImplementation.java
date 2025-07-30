@@ -14,10 +14,11 @@ public class EmailDetailsServiceImplementation implements EmailDetailsService{
     public EmailDetailsServiceImplementation(EmailDetailsRepository emailDetailsRepository) {
         this.emailDetailsRepository = emailDetailsRepository;
     }
+    
 
     @Override
-    public List<EmailDetails> emailDetailsList() {
-        return emailDetailsRepository.findAll();
+    public List<EmailDetails> getAllEmailDetails() {
+        return null;
     }
 
     @Override

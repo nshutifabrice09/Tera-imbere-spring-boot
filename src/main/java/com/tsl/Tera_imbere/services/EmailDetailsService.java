@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface EmailDetailsService {
 
-    List<EmailDetails> emailDetailsList();
+    List<EmailDetails> getAllEmailDetails();
     EmailDetails getEmailDetailsById(Long id);
     EmailDetails saveEmailDetails(EmailDetails emailDetails);
     EmailDetails updateEmailDetails(Long id, EmailDetails emailDetails);
