@@ -26,5 +26,19 @@ public class EmailDetailsController {
     public List<EmailDetails> emailDetailsList(){
         return emailDetailsService.getAllEmailDetails();
     }
-    
+
+    @GetMapping("/emailDetail/{id}")
+    public EmailDetails getEmailDetails(@PathVariable ("id") Long id){
+        return emailDetailsService.getEmailDetailsById(id);
+    }
+
+    @PutMapping("/update/emailDetail/{id}")
+    public EmailDetails updateEmailDetail(@PathVariable ("id") Long id, @RequestBody EmailDetails emailDetails){
+        return emailDetailsService.updateEmailDetails(id, emailDetails);
+    }
+
+    @DeleteMapping("/delete/emailDetail/{id}")
+    public void removeEmailDetail(@PathVariable ("id") Long id){
+        emailDetailsService.removeEmailDetails(id);
+    }
 }
