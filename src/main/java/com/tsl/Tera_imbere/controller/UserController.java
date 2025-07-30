@@ -4,22 +4,30 @@ import com.tsl.Tera_imbere.model.User;
 import com.tsl.Tera_imbere.repository.UserRepository;
 import com.tsl.Tera_imbere.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping
 public class UserController {
 
+    private final UserService userService;
+
     @Autowired
-    UserService userService;
+    public UserController(UserService userService){
+        this.userService = userService;
+    }
     public UserRepository userRepository;
 
     @PostMapping("/user")
-    User newUser(@RequestBody User newUser){
-        return userRepository.save(newUser);
+    public User saveUser(@RequestBody User user){
+        return userRepository.save(user);
+    }
+
+    @GetMapping("/users")
+    public List<User> userList(){
+        return userService.get
     }
 
 }

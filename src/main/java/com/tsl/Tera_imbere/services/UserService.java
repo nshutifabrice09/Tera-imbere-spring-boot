@@ -5,5 +5,5 @@ import com.tsl.Tera_imbere.dto.UserRequest;
 
 public interface UserService {
 
-    BankResponse createAccount(UserRequest userRequest);
+  
 }
