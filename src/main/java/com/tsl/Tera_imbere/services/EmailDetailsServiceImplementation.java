@@ -32,6 +32,14 @@ public class EmailDetailsServiceImplementation implements EmailDetailsService{
 
     @Override
     public EmailDetails updateEmailDetails(Long id, EmailDetails emailDetails) {
+        EmailDetails existEmailDetails = emailDetailsRepository.findEmailDetailsById(id);
+        if(existEmailDetails != null){
+            existEmailDetails.setRecipient(emailDetails.getRecipient());
+            existEmailDetails.setMessageBody(existEmailDetails.getMessageBody());
+            existEmailDetails.setSubject(emailDetails.getSubject());
+            existEmailDetails.setAttachment(emailDetails.getAttachment());
+            return emailDetailsRepository.save(emailDetails);
+        }
         return null;
     }
 
