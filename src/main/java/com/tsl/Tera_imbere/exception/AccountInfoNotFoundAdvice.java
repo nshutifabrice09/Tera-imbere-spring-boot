@@ -1,2 +1,4 @@
-package com.tsl.Tera_imbere.exception;public class AccountInfoNotFoundAdvice {
+package com.tsl.Tera_imbere.exception;
+
+public class AccountInfoNotFoundAdvice {
 }

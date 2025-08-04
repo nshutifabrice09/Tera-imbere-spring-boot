@@ -38,7 +38,7 @@ public class EmailDetailsController {
     }
 
     @DeleteMapping("/delete/emailDetail/{id}")
-    public void removeEmailDetail(@PathVariable ("id") Long id){
+    public void remove(@PathVariable ("id") Long id){
         emailDetailsService.removeEmailDetails(id);
     }
 }
